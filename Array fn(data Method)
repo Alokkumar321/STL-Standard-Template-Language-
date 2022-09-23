@@ -1,0 +1,33 @@
+#include<iostream>
+#include<array>
+using namespace std;
+int main()
+{
+    array<int, 7> a= {7,6,5,4,3,2,1};
+    
+    cout<<"First   Element of the Array : "<<*(a.data())<<endl;
+    
+    //Now, in order to print 2nd & later Elements we need to assign "a.data" to a new Variable.
+    
+    auto it = a.data();
+    it++; //Incrementing "it" so that Second Element can be printed
+    
+    cout<<"Second  Element of the Array : "<<*it<<endl;
+    
+    it++;
+    cout<<"Third   Element of the Array : "<<*it<<endl;
+    
+    it++;
+    cout<<"Fourth  Element of the Array : "<<*it<<endl;
+    
+    it++;
+    cout<<"Fifth   Element of the Array : "<<*it<<endl;
+    
+    it++;
+    cout<<"Sixth   Element of the Array : "<<*it<<endl;
+    
+    it++;
+    cout<<"Seventh Element of the Array : "<<*it;
+    
+    return 0;
+}
