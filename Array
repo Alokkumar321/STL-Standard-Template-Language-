@@ -18,7 +18,7 @@ int main()
  cout<<endl<<"Last Element of the Array  : "<<a.back()<<endl; //This will Return last Element of the Array
  
  a.fill(10);//--------------------------
- cout<<endl<<"The New Array : ";           //
+ cout<<endl<<"The New Array : ";       //
  for(int i=0; i<size; i++)             //
  {                                     //
      cout<<a[i];                       //
