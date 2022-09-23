@@ -1,0 +1,73 @@
+#include<iostream>
+#include<array>
+using namespace std;
+int main()
+{
+ array<int, 10> a = {1,2,3,4,5,6,7,8,9,10};
+ int size = a.size();
+ cout<<"Elements of the Array : ";
+ for(int i = 0; i<size; i++)
+ {
+     cout<<a[i]<<" "; // Printing the above array.
+ }
+ 
+ cout<<endl<<"Size of the Array : "<<a.size();              //This will Return the Size of the Array
+ cout<<endl<<"First Element of the Array : "<<a.front();   //This will Return 1st Element of the Array
+ cout<<endl<<"First Element of the Array : "<<*(a.data());//Using Data Method
+ cout<<endl<<"Second Element of the Array: "<<a.at(1);   //This will Return Element at Second Index
+ cout<<endl<<"Last Element of the Array  : "<<a.back()<<endl; //This will Return last Element of the Array
+ 
+ a.fill(10);//--------------------------
+ cout<<endl<<"The New Array : ";           //
+ for(int i=0; i<size; i++)             //
+ {                                     //
+     cout<<a[i];                       //
+ }                                     //
+                                       //--->Two ways of using "fill" function
+ fill(a.begin()+1, a.end()-1, 5);      //
+ cout<<endl<<"Another Array : ";       //
+ for(int i = 0; i<size; i++)           //
+ {                                     //
+     cout<<a[i];                       //
+ }//------------------------------------
+ 
+ if(a.empty() == false) //----->Using "Empty()" Function to check Whether The Array is Empty or Not
+ {
+     cout<<endl<<"Array is not Empty"<<endl;
+ }
+ else
+ {
+    cout<<"Array is Empty"<<endl;
+ }
+ array<int, 5>array1 = {1,2,3,4,5};
+ array<int, 5>array2 = {5,4,3,2,1};
+ cout<<endl<<"Array1 : ";                        //or int size2 = array1.size();
+ for(auto i=array1.begin(); i<array1.end();++i) //or for(int i = 0; i<size2; i++)
+ {                                             // {
+     cout<<*i<<" ";                           // cout<<array1[i]<<" ";
+ }                                           // }
+ cout<<endl<<"Array2 : ";
+ for(auto i =array2.begin(); i<array2.end();++i)
+ {
+     cout<<*i<<" ";
+ }
+ 
+ // Swapping array1 with array2 
+ array1.swap(array2);//---->using Swap Function
+ cout<<endl<<"----- After Swapping -----";
+ 
+ cout<<endl<<"Array1 : ";
+ for(auto i=array1.begin(); i<array1.end(); ++i)
+ {
+     cout<<*i<<" ";
+ }
+ 
+ cout<<endl<<"Array2 : ";
+ for(auto i=array2.begin(); i<array2.end(); ++i)
+ {
+     cout<<*i<<" ";
+ }
+ 
+ return 0;
+ 
+}
